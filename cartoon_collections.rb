@@ -16,7 +16,7 @@ require 'pry'
 
 
 def roll_call_dwarves(ok)
-binding.pry byebug 
+byebug 
     ok.each_with_index do |item, index| 
     puts "#{index+1}. #{item}"    
     binding.pry 
