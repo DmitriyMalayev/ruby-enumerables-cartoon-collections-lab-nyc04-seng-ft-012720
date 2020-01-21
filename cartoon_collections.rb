@@ -16,6 +16,7 @@ require 'pry'
 
 
 def roll_call_dwarves(ok)
+binding.pry 
     ok.each_with_index do |item, index| 
     puts "#{index+1}. #{item}"    
     binding.pry 
@@ -39,21 +40,21 @@ def long_planeteer_calls(words)
 
 
 def find_the_cheese(ok)
+  cheese_types = ["cheddar", "gouda", "camembert"]   
   i = 0 
-  cheese_types = ["cheddar", "gouda", "camembert"]  
-  while i < ok.length do 
-    if ok[i] == "cheddar" 
-      puts "cheddar"
-    elsif ok[i] == "gouda" 
-      puts "gouda"
-    elsif ok[i] == "camembert" 
-      puts "camembert"
-    i+=1 
+  
+    cheese_types.each do |item| 
+      
+      if ok.include?(item)
+      return item
+    
+    end 
   end 
-  return ok 
+    return nil
   end 
+  
 
-# 
+
 #   i = 0 
 # enu.find { |el|  el % 2 == 0 && el % 9 == 0}  
 
